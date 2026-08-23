@@ -217,12 +217,22 @@ wheels = [
 ]
 
 [[package]]
+name = "jsonpath-python"
+version = "1.1.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/98/18/4ca8742534a5993ff383f7602e325ce2d5d7cc93d72ac5e1cdedbea8a458/jsonpath_python-1.1.6.tar.gz", hash = "sha256:dded9932b4ec41fb8726e09c83afa4e6be618f938c2db287cc2a81723c639671", size = 88178, upload-time = "2026-05-07T01:26:34.482Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/8a/1270a6803bd821cbfcdda387eaa13cb41a7b1f7b9bd145979b3bfb9d6cb7/jsonpath_python-1.1.6-py3-none-any.whl", hash = "sha256:a1c50afd8d3fbbaf47a4873bc890dcb3c15da96f5c020327977d844d8731a2d4", size = 14453, upload-time = "2026-05-07T01:26:33.306Z" },
+]
+
+[[package]]
 name = "lesson-parallelization"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "anthropic" },
     { name = "common" },
+    { name = "openrouter" },
     { name = "python-dotenv" },
     { name = "rich" },
 ]
@@ -231,6 +241,7 @@ dependencies = [
 requires-dist = [
     { name = "anthropic", specifier = ">=0.40.0" },
     { name = "common", editable = "../../common" },
+    { name = "openrouter", specifier = ">=1.1.74" },
     { name = "python-dotenv", specifier = ">=1.0.0" },
     { name = "rich", specifier = ">=13.7.0" },
 ]
@@ -254,6 +265,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729, upload-time = "2022-08-14T12:40:10.846Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979, upload-time = "2022-08-14T12:40:09.779Z" },
+]
+
+[[package]]
+name = "openrouter"
+version = "1.1.74"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpcore" },
+    { name = "httpx" },
+    { name = "jsonpath-python" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d1/50/3836888c9bda0c664883458b4ca2bac15ca51dcd174faed84823c36bb07d/openrouter-1.1.74.tar.gz", hash = "sha256:08fe9ba1cd0a678da6bd86f0b9782267a401836302458e159aebdbb0c47be88e", size = 429077, upload-time = "2026-08-22T05:13:32.937Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/a7/67e5e1f53c86e5fe7264cf29bbc3bdef5ff906180574fce30775219181b8/openrouter-1.1.74-py3-none-any.whl", hash = "sha256:d6ea3233ec9a180cadc7701772986cdb3945998d8a4b5ca9c1cd6c59e11ff171", size = 925685, upload-time = "2026-08-22T05:13:31.156Z" },
 ]
 
 [[package]]
