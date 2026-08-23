@@ -51,6 +51,13 @@
 - tool_use系のレッスンでツール定義変換（Anthropic input_schema → OpenAI function calling形式）が
   必要な場合、変換ヘルパーは教材オリジナルのディレクトリ（`tools/`等）には混ぜず、
   レッスン直下に独立ファイル（例: `openrouter_adapter.py`）として配置する
+- 強制ツール選択: Anthropicの `{"type": "tool", "name": "X"}` →
+  OpenRouterの `{"type": "function", "function": {"name": "X"}}`
+- Web検索の組み込みツール: Anthropicの
+  `{"type": "web_search_20250305", "name": "web_search", "max_uses": N}` →
+  OpenRouterの `{"type": "web_search", "max_uses": N}`（OpenAI Responses API互換の
+  ショートハンド形式。サーバー側で実行されるため、Anthropic版のようなクライアント側での
+  tool_use/tool_result往復は不要）
 
 ### 構造化出力（response_format）
 
@@ -72,6 +79,18 @@
 - Anthropic版でXMLタグ（`<schema>...</schema>`）を使っている箇所は、
   OpenRouter版ではMarkdown見出し（`## Schema` など）に置き換える
   （XMLタグの効きはClaude固有の学習傾向によるもので、非Claudeモデルには弱い）
+
+### mypy対策
+
+- openrouterパッケージの型スタブは `chat.send()` の `messages` 引数に厳密なUnion型
+  （TypedDict群）を要求するが、プレーンな `dict` リテラルのリストはこの型に一致せず
+  `call-overload`（`**kwargs`併用時）または `arg-type`（併用しない時）エラーになる
+- `chat.send(` の行末に `# type: ignore[call-overload]`（または `[arg-type]`）を付ける。
+  実行時の挙動には影響しない、型スタブの厳密さに起因する既知の問題
+- `_call_llm` のようなラッパーメソッドが `ChatResult` を返す場合、
+  `response: ChatResult = self.client.chat.send(...)` のように変数へ明示的に型注釈を
+  付けないと、`# type: ignore` の影響で戻り値が `Any` 扱いになり
+  `no-any-return` エラーが出ることがある
 
 ### reasoning / 思考モデル対策
 
