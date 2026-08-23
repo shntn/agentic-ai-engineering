@@ -73,7 +73,7 @@ class PromptingClient:
             model=self.model,
             temperature=0.0,
             max_tokens=max_tokens,
-            reasoning={"effort": "none", "summary": "null"},
+            reasoning={"effort": "none"},
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content},

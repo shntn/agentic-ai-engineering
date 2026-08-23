@@ -96,7 +96,7 @@ class PromptEngineer:
             model=self.model,
             temperature=0.1,
             max_tokens=200,
-            reasoning={"effort": "none", "summary": "null"},
+            reasoning={"effort": "none"},
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},

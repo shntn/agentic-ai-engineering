@@ -82,7 +82,7 @@ class ParallelContentGenerator:
             model=self.model,
             max_tokens=2048,
             temperature=temperature,
-            reasoning={"effort": "none", "summary": "null"},
+            reasoning={"effort": "none"},
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_message},

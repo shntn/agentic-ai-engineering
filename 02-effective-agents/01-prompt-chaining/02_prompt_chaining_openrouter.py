@@ -113,7 +113,7 @@ class PromptChain:
         response: ChatResult = self.client.chat.send(  # type: ignore[call-overload]
             model=model,
             max_tokens=max_tokens,
-            reasoning={"effort": "none", "summary": "null"},
+            reasoning={"effort": "none"},
             messages=[{"role": "system", "content": system}, *messages],
             **kwargs,
         )

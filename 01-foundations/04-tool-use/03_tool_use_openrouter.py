@@ -220,7 +220,7 @@ class ToolUseChat:
             response = self.client.chat.send(  # type: ignore[call-overload]
                 model=self.model,
                 max_tokens=4096,
-                reasoning={"effort": "none", "summary": "null"},
+                reasoning={"effort": "none"},
                 tools=TOOLS,
                 messages=self.messages,
             )

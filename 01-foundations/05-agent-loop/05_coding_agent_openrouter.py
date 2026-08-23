@@ -158,7 +158,7 @@ class CodingAgent:
                 model=self.model,
                 temperature=0.1,
                 max_tokens=4096,
-                reasoning={"effort": "none", "summary": "null"},
+                reasoning={"effort": "none"},
                 tools=TOOLS,
                 messages=[{"role": "system", "content": SYSTEM_PROMPT}, *messages],
             )

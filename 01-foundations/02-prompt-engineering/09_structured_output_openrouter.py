@@ -89,7 +89,7 @@ class StructuredOutputClient:
             model=self.model,
             temperature=0.0,
             max_tokens=512,
-            reasoning={"effort": "none", "summary": "null"},
+            reasoning={"effort": "none"},
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_input},

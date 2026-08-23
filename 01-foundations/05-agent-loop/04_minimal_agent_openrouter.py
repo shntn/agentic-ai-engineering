@@ -32,7 +32,7 @@ def agent(goal: str) -> str:
         response = client.chat.send(  # type: ignore[call-overload]
             model="deepseek/deepseek-v4-flash",
             max_tokens=4096,
-            reasoning={"effort": "none", "summary": "null"},
+            reasoning={"effort": "none"},
             messages=messages,
             tools=TOOLS,
         )
