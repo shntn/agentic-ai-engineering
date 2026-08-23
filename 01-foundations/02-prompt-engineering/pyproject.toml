@@ -10,6 +10,7 @@ dependencies = [
     "python-dotenv>=1.0.0",  # Environment variable management
     "common",
     "rich>=13.7.0",  # Beautiful terminal output
+    "openrouter>=1.1.73",
 ]
 
 [tool.uv.sources]
