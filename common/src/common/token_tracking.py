@@ -188,3 +188,27 @@ class GeminiTokenTracker(TokenUsageTracker):
             self.total_output_tokens += getattr(usage, "candidates_token_count", 0) or 0
         else:
             logger.warning("Invalid Gemini usage format: %s.", type(usage))
+
+
+class OpenRouterTokenTracker(TokenUsageTracker):
+    """
+    Token tracker for OpenRouter.
+
+    Handles OpenRouter's normalized usage format with prompt_tokens and completion_tokens.
+    """
+
+    def track(self, usage: Any) -> None:
+        """
+        Track tokens from a OpenRouter response.
+
+        Args:
+            usage: OpenRouter usage object with prompt_tokens and completion_tokens
+        """
+        if hasattr(usage, "prompt_tokens") and hasattr(usage, "completion_tokens"):
+            self.total_input_tokens += usage.prompt_tokens
+            self.total_output_tokens += usage.completion_tokens
+        else:
+            logger.warning(
+                "Invalid OpenRouter usage format: %s. Expected prompt_tokens and completion_tokens.",
+                type(usage),
+            )

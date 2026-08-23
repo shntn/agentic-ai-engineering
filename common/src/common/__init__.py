@@ -8,6 +8,7 @@ from .token_tracking import (
     LiteLLMTokenTracker,
     OpenAITokenTracker,
     TokenUsageTracker,
+    OpenRouterTokenTracker,
 )
 
 __all__ = [
@@ -18,4 +19,5 @@ __all__ = [
     "TokenUsageTracker",
     "interactive_menu",
     "setup_logging",
+    "OpenRouterTokenTracker",
 ]

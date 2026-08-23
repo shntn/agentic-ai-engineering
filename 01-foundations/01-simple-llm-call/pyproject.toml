@@ -8,6 +8,7 @@ dependencies = [
     "common",
     "litellm>=1.0.0",  # Unified LLM API client
     "openai>=1.0.0",  # OpenAI API client
+    "openrouter>=1.1.73",
     "python-dotenv>=1.0.0",  # Environment variable management
     "rich>=14.2.0",
 ]
