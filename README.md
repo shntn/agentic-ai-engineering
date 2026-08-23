@@ -1,3 +1,10 @@
+> **📌 About this fork**
+>
+> This is a fork of [agenticloops-ai/agentic-ai-engineering](https://github.com/agenticloops-ai/agentic-ai-engineering) with OpenRouter support and Japanese translations added on the `ja-openrouter` branch.
+> See [fork.ja.md](fork.ja.md) for details (Japanese only).
+
+---
+
 <div align="center">
 
 <!-- ![AI Agents Engineering](.docs/banner.png) -->
