@@ -120,18 +120,23 @@ orb -m dev uv run --directory 01-foundations/04-tool-use python 03_tool_use_open
 ### コミットメッセージのルール
 
 - [Conventional Commits](https://www.conventionalcommits.org/) に準拠する
-- `type`（`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:` 等）と `scope` は英語
+- `type`（`feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:` 等）と `scope` は英語
+  - `style:` はロジックを変更しない整形のみの変更（`ruff format`適用など）に使う
 - `description`（1行目の要約）と、任意の `body`（詳細説明）は日本語
-- `scope` はレッスンディレクトリ名（例: `01-simple-llm-call`, `06-codebase-navigator`。
-  親パスの `01-foundations/` は含めない）か、
-  リポジトリ横断的な変更の場合は `docs` / `common` / `fork` のような抽象カテゴリを使う
+- `scope` は以下のいずれか
+  - レッスンディレクトリ名（例: `01-simple-llm-call`, `06-codebase-navigator`。親パスの `01-foundations/` は含めない）
+  - 1つのモジュール内の複数レッスンにまたがる変更は、モジュール名（例: `01-foundations`）
+  - リポジトリ横断的な変更は `docs` / `common` / `fork` のような抽象カテゴリ
+- `body` は説明文の段落ではなく、**変更したファイル・ディレクトリ単位の箇条書き**にする
 
-例:
+`NN_xxx_openrouter.py` 追加コミットの典型的な形:
 ```
-docs(fork): フォークの説明を追加
+feat(<lesson>): OpenRouter対応版を追加
 
-- README.md, README.ja.md の冒頭に本フォークについての案内とfork.ja.mdへのリンクを追加
-- fork.ja.md を新規作成し、OpenRouter対応・日本語化の内容とブランチ構成を説明
+- <script>.py を追加
+- （必要な場合）変換ヘルパー・日本語化ディレクトリ・サンプル入力等を追加
+- openrouter パッケージを依存関係に追加
+- fork.ja.md の進捗表を更新（<lesson>: 完了）
 ```
 
 ### コミットの粒度
