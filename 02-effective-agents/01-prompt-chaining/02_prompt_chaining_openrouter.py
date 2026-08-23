@@ -97,7 +97,7 @@ class PromptChain:
         use_light: bool = False,
         max_tokens: int = 4096,
         tools: list[dict[str, Any]] | None = None,
-        timeout_ms: int | None = None,                  # timeout_ms の設定を追加
+        timeout_ms: int | None = None,  # timeout_ms の設定を追加
     ) -> ChatResult:
         """単一のLLM呼び出しを行い、トークンを追跡"""
         model = self.light_model if use_light else self.model
@@ -140,7 +140,9 @@ class PromptChain:
         # OpenRouterのWeb検索はサーバー側で実行される組み込みツールのため、
         # Anthropic版のようなクライアント側でのtool_use/tool_resultの往復は不要
         # デフォルトのタイムアウト設定は短すぎるため、timeout_ms の設定を追加
-        response = self._call_llm(system, messages, use_light=use_light, tools=tools, timeout_ms=REQUEST_TIMEOUT_MS)
+        response = self._call_llm(
+            system, messages, use_light=use_light, tools=tools, timeout_ms=REQUEST_TIMEOUT_MS
+        )
         text = str(response.choices[0].message.content or "")
         searches: list[dict[str, str]] = []
         return text, searches
