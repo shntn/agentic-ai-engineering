@@ -7,6 +7,7 @@ dependencies = [
     "anthropic>=0.40.0",  # Anthropic API client
     "common",
     "openai>=1.0.0",  # OpenAI API client
+    "openrouter>=1.1.74",
     "python-dotenv>=1.0.0",  # Environment variable management
     "rich>=13.7.0",  # Beautiful terminal output
 ]
