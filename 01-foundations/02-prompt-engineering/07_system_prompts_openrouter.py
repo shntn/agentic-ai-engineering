@@ -10,7 +10,6 @@
 """
 
 import os
-import json
 from openrouter import OpenRouter
 from dotenv import find_dotenv, load_dotenv
 from rich.console import Console
@@ -32,7 +31,7 @@ SUPPORT_TICKETS = [
             "以前は即時だったページが 10 秒以上ハングアップします。Wi-Fi に接続しているのですが、"
             "他のものはすべて正常に動作します。これは本当にイライラします。仕事でこれが必要なのです。"
             "できるだけ早く直してもらえますか？"
-        )
+        ),
     },
     {
         "label": "Ticket 2 — 機能が動作しない",
@@ -93,18 +92,18 @@ class PromptEngineer:
         """指定されたシステムおよびユーザープロンプトを使用して 1 つの LLM 呼び出しを実行"""
         logger.info("Calling model: %s", self.model)
 
-        response = self.client.chat.send(
+        response = self.client.chat.send(  # type: ignore[call-overload]
             model=self.model,
             temperature=0.1,
             max_tokens=200,
             reasoning={"effort": "none", "summary": "null"},
             messages=[
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ]
+                {"role": "user", "content": user_prompt},
+            ],
         )
 
-        #print(json.dumps(response.model_dump(), indent=2, ensure_ascii=False))
+        # print(json.dumps(response.model_dump(), indent=2, ensure_ascii=False))
 
         self.token_tracker.track(response.usage)
         logger.info(
@@ -168,7 +167,9 @@ def main() -> None:
                 config = next(c for c in PROMPT_CONFIGS if c["label"] == config_selection)
 
                 console.print(f"\n[bold yellow]━━━ {config['label']} ━━━[/bold yellow]")
-                console.print(Panel(config["system"], title="システムプロンプト", border_style="dim"))
+                console.print(
+                    Panel(config["system"], title="システムプロンプト", border_style="dim")
+                )
 
                 try:
                     response = engineer.run(config["system"], user_prompt)

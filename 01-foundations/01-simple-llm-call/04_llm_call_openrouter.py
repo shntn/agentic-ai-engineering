@@ -30,7 +30,9 @@ class LLMClient:
         """
         self.client = OpenRouter(api_key=os.getenv("OPENROUTER_API_KEY", ""))
         self.model = model
-        self.system_prompt = "あなたは役に立つ AI アシスタントです。明確かつ簡潔な回答を提供してください。"
+        self.system_prompt = (
+            "あなたは役に立つ AI アシスタントです。明確かつ簡潔な回答を提供してください。"
+        )
 
     def run(self, prompt: str) -> str:
         """
@@ -43,11 +45,13 @@ class LLMClient:
             model=self.model,
             temperature=0.1,
             max_tokens=1024,
-            messages=[
+            messages=[  # type: ignore[arg-type]
                 {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": prompt}
-            ]
+                {"role": "user", "content": prompt},
+            ],
         )
+
+        assert response.usage is not None
 
         # トークンの使用状況をログに記録
         logger.info(

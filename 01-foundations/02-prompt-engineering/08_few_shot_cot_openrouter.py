@@ -10,8 +10,6 @@ Few-Shot および Chain-of-Thought プロンプティング（OpenRouter）
 """
 
 import os
-import json
-import time
 from openrouter import OpenRouter
 from dotenv import find_dotenv, load_dotenv
 from rich.console import Console
@@ -71,14 +69,14 @@ class PromptingClient:
 
     def _call(self, system_prompt: str, user_content: str, max_tokens: int = 256) -> str:
         """単一のAPI呼び出しを行い、トークンを追跡"""
-        response = self.client.chat.send(
+        response = self.client.chat.send(  # type: ignore[call-overload]
             model=self.model,
             temperature=0.0,
             max_tokens=max_tokens,
             reasoning={"effort": "none", "summary": "null"},
             messages=[
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_content}
+                {"role": "user", "content": user_content},
             ],
         )
 

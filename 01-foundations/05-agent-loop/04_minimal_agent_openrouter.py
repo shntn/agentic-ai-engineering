@@ -29,7 +29,7 @@ def agent(goal: str) -> str:
     messages = [{"role": "user", "content": goal}]
 
     for _ in range(10):
-        response = client.chat.send(
+        response = client.chat.send(  # type: ignore[call-overload]
             model="deepseek/deepseek-v4-flash",
             max_tokens=4096,
             reasoning={"effort": "none", "summary": "null"},
@@ -80,7 +80,9 @@ def agent(goal: str) -> str:
 
 if __name__ == "__main__":
     print("ミニマムエージェント（終了するには 'quit' と入力）")
-    print("試してみてください: 'カレントディレクトリのファイルの内容を要約して' や '使用しているOSを教えて'")
+    print(
+        "試してみてください: 'カレントディレクトリのファイルの内容を要約して' や '使用しているOSを教えて'"
+    )
     while True:
         task = input("\nYou: ").strip()
         if task.lower() in ("exit", "quit", "q", ""):

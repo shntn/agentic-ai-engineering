@@ -46,7 +46,7 @@ class ChatSession:
         logger.info("Agent processing message (history length: %d)", len(self.messages))
 
         # メッセージ履歴全体を含めて API 呼び出しを行う
-        response = self.client.chat.send(
+        response = self.client.chat.send(  # type: ignore[call-overload]
             model=self.model,
             temperature=0.1,
             max_tokens=2048,

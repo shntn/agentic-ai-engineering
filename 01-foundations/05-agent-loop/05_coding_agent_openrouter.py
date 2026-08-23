@@ -154,7 +154,7 @@ class CodingAgent:
             logger.info(f"--- Iteration {iteration + 1} ---")
 
             # モデルを呼び出す
-            response = self.client.chat.send(
+            response = self.client.chat.send(  # type: ignore[call-overload]
                 model=self.model,
                 temperature=0.1,
                 max_tokens=4096,

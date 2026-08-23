@@ -217,7 +217,7 @@ class ToolUseChat:
             logger.info("API call (messages: %d)", len(self.messages))
 
             # ツールを指定して API 呼び出しを行う
-            response = self.client.chat.send(
+            response = self.client.chat.send(  # type: ignore[call-overload]
                 model=self.model,
                 max_tokens=4096,
                 reasoning={"effort": "none", "summary": "null"},

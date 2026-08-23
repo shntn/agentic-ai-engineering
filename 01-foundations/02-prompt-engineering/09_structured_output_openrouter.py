@@ -78,21 +78,21 @@ PRODUCT_DESCRIPTION = (
 class StructuredOutputClient:
     """OpenRouter の API を用いた構造化出力の手法を実演"""
 
-    def __init__(self, model: str, token_tracker: OpenAITokenTracker):
+    def __init__(self, model: str, token_tracker: OpenRouterTokenTracker):
         self.client = OpenRouter(api_key=os.getenv("OPENROUTER_API_KEY", ""))
         self.model = model
         self.token_tracker = token_tracker
 
     def _call(self, system: str, user_input: str, **kwargs) -> str:
         """API 呼び出しを行い、トークンを追跡"""
-        response = self.client.chat.send(
+        response = self.client.chat.send(  # type: ignore[call-overload]
             model=self.model,
             temperature=0.0,
             max_tokens=512,
             reasoning={"effort": "none", "summary": "null"},
             messages=[
                 {"role": "system", "content": system},
-                {"role": "user", "content": user_input}
+                {"role": "user", "content": user_input},
             ],
             **kwargs,
         )
@@ -224,7 +224,9 @@ def _run_method_2(console: Console, client: StructuredOutputClient) -> None:
 
 def _run_method_3(console: Console, client: StructuredOutputClient) -> None:
     """スキーマ強制抽出手法を実行"""
-    console.print("[dim]response_format による API レベルの強制 — 有効な JSON が保証されます。[/dim]\n")
+    console.print(
+        "[dim]response_format による API レベルの強制 — 有効な JSON が保証されます。[/dim]\n"
+    )
     schema_preview = json.dumps(PRODUCT_JSON_SCHEMA, indent=2, ensure_ascii=False)
     prompt_3 = (
         "**システムプロンプト:**\n"

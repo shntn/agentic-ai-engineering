@@ -169,7 +169,7 @@ class CodeNavigatorAgent:
 
         for _iteration in range(self.max_iterations):
             try:
-                response = self.client.chat.send(
+                response = self.client.chat.send(  # type: ignore[call-overload]
                     model=self.model,
                     max_tokens=4096,
                     reasoning={"effort": "none", "summary": "null"},
