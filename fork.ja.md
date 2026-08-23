@@ -16,7 +16,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 |------------------------|-----------------------------|------------|
 | 01-foundations         | 01-simple-llm-call          | ✅ 完了   |
 | 01-foundations         | 02-prompt-engineering       | ✅ 完了   |
-| 01-foundations         | 03-chat                     | ⬜ 未着手 |
+| 01-foundations         | 03-chat                     | ✅ 完了   |
 | 01-foundations         | 04-tool-use                 | ⬜ 未着手 |
 | 01-foundations         | 05-agent-loop               | ⬜ 未着手 |
 | 01-foundations         | 06-codebase-navigator       | ⬜ 未着手 |
