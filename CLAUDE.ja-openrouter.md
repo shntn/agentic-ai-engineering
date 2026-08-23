@@ -104,7 +104,9 @@ orb -m dev uv run --directory <lesson-dir> python <script>.py
 orb -m dev uv run --directory 01-foundations/04-tool-use python 03_tool_use_openrouter.py
 ```
 
-## コミットメッセージのルール
+## コミット
+
+### コミットメッセージのルール
 
 - [Conventional Commits](https://www.conventionalcommits.org/) に準拠する
 - `type`（`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:` 等）と `scope` は英語
@@ -120,3 +122,11 @@ docs(fork): フォークの説明を追加
 - README.md, README.ja.md の冒頭に本フォークについての案内とfork.ja.mdへのリンクを追加
 - fork.ja.md を新規作成し、OpenRouter対応・日本語化の内容とブランチ構成を説明
 ```
+
+### コミットの粒度
+
+- OpenRouter対応スクリプトの追加（`NN_xxx_openrouter.py`、依存関係の更新含む）は `feat` として、
+  レッスン単位で1コミットにまとめる
+- README.ja.md の翻訳は `docs` として、モジュール（`01-foundations`等）配下の
+  全レッスン分をまとめて1コミットにする（モジュール全体の README.ja.md も同じコミットに含める）
+- fork.ja.md の進捗表更新は、該当レッスンの feat コミットに含める
