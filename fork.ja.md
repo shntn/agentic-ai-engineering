@@ -23,7 +23,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 | 02-effective-agents    | 01-prompt-chaining          | ✅ 完了   |
 | 02-effective-agents    | 02-routing                  | ✅ 完了   |
 | 02-effective-agents    | 03-parallelization          | ✅ 完了   |
-| 02-effective-agents    | 04-orchestrator-workers     | ⬜ 未着手 |
+| 02-effective-agents    | 04-orchestrator-workers     | ✅ 完了   |
 | 02-effective-agents    | 05-evaluator-optimizer      | ⬜ 未着手 |
 | 02-effective-agents    | 06-human-in-the-loop        | ⬜ 未着手 |
 | 02-effective-agents    | 07-content-writer           | ⬜ 未着手 |
