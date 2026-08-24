@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.76.0",  # Anthropic API client (structured outputs, tool_use)
     "openai>=1.0.0",  # OpenAI API client (response_format strict schemas)
+    "openrouter>=1.1.74",  # OpenRouter API client
     "pydantic>=2.0.0",  # Schema definitions and validation
     "python-dotenv>=1.0.0",  # Environment variable management
     "common",
