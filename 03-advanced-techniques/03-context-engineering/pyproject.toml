@@ -5,6 +5,8 @@ description = "Context window management with token counting and compression"
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.76.0",
+    "openrouter>=1.1.74",  # OpenRouter API client
+    "tiktoken>=0.7.0",  # トークンカウントの近似（OpenRouterには専用APIがないため）
     "python-dotenv>=1.0.0",
     "common",
     "rich>=13.7.0",
