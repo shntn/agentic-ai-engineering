@@ -30,7 +30,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 | 03-advanced-techniques | 01-structured-output        | ✅ 完了   |
 | 03-advanced-techniques | 02-streaming                | ✅ 完了   |
 | 03-advanced-techniques | 03-context-engineering      | ✅ 完了   |
-| 03-advanced-techniques | 04-cost-optimization        | ⬜ 未着手 |
+| 03-advanced-techniques | 04-cost-optimization        | ✅ 完了   |
 | 03-advanced-techniques | 05-memory                   | ⬜ 未着手 |
 | 03-advanced-techniques | 06-rag-techniques           | ⬜ 未着手 |
 | 03-advanced-techniques | 07-multimodal               | ⬜ 未着手 |
