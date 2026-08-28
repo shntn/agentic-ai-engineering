@@ -5,6 +5,7 @@ description = "Three-tier agent memory — working, episodic, and semantic persi
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.76.0",
+    "openrouter>=1.1.74",  # OpenRouter API client
     "chromadb>=0.5.0",
     "common",
     "python-dotenv>=1.0.0",
