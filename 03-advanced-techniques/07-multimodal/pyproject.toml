@@ -8,6 +8,7 @@ dependencies = [
     "common",
     "google-genai>=1.0.0",
     "openai>=1.0.0",
+    "openrouter>=1.1.74",  # OpenRouter API client
     "python-dotenv>=1.0.0",
     "rich>=13.7.0",
 ]
