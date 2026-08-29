@@ -14,7 +14,7 @@ from rich.table import Table
 
 from common import setup_logging
 from common.menu import interactive_menu
-from memory import EpisodicMemory, SemanticMemory
+from memory_openrouter import EpisodicMemory, SemanticMemory
 
 logger = setup_logging(__name__)
 

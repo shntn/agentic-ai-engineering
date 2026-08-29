@@ -1,13 +1,14 @@
 """3階層メモリシステム — working・episodic・semantic（OpenRouter対応版）。
 
-working/episodic/semantic の各層はプロバイダーに依存しないため、`memory/` パッケージの
-実装をそのまま再利用する。`MemoryManager` のみ、`consolidate()` がAnthropicの
-APIに依存しているため、OpenRouter対応版をこのパッケージで上書きする。
+コメント・ログを日本語化し、日本語キーワード検索に対応させるため、`memory/`
+パッケージ全体をこちらに複製している（`memory/`自体は無変更のまま維持）。
 """
 
-from memory import EpisodicMemory, MemoryEntry, MemoryType, SemanticMemory, WorkingMemory
-
+from .episodic import EpisodicMemory
 from .manager import MemoryManager
+from .models import MemoryEntry, MemoryType
+from .semantic import SemanticMemory
+from .working import WorkingMemory
 
 __all__ = [
     "EpisodicMemory",

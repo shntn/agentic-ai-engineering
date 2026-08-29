@@ -3,13 +3,14 @@
 import json
 
 from common.logging_config import setup_logging
-from memory.episodic import EpisodicMemory
-from memory.models import MemoryEntry, MemoryType
-from memory.semantic import SemanticMemory
-from memory.working import WorkingMemory
 from openrouter import OpenRouter
 from openrouter.components import ChatResult
 from openrouter.errors import OpenRouterError
+
+from .episodic import EpisodicMemory
+from .models import MemoryEntry, MemoryType
+from .semantic import SemanticMemory
+from .working import WorkingMemory
 
 logger = setup_logging(__name__)
 
