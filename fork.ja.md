@@ -32,7 +32,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 | 03-advanced-techniques | 03-context-engineering      | ✅ 完了   |
 | 03-advanced-techniques | 04-cost-optimization        | ✅ 完了   |
 | 03-advanced-techniques | 05-memory                   | ✅ 完了   |
-| 03-advanced-techniques | 06-rag-techniques           | ⬜ 未着手 |
+| 03-advanced-techniques | 06-rag-techniques           | ✅ 完了   |
 | 03-advanced-techniques | 07-multimodal               | ⬜ 未着手 |
 | 03-advanced-techniques | 08-guardrails               | ⬜ 未着手 |
 | 04-testing-evaluation  | 01-unit-testing-agents      | ⬜ 未着手 |

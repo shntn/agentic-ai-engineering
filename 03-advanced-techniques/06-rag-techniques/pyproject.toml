@@ -5,9 +5,11 @@ description = "RAG pipeline with hybrid search, reranking, and agentic retrieval
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.76.0",
+    "openrouter>=1.1.74",  # OpenRouter API client
     "sentence-transformers>=3.0.0",
     "chromadb>=1.0.0",
     "bm25s>=0.2.0",
+    "janome>=0.5.0",  # rag_openrouter/の日本語形態素解析用（bm25sは英語向けのため、事前分割したトークンを渡す）
     "flashrank>=0.2.0",
     "python-dotenv>=1.0.0",
     "common",
