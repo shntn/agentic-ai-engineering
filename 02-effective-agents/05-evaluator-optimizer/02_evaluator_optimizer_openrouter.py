@@ -29,8 +29,8 @@ load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
 OUTPUT_DIR = Path("output")
-MODEL = "deepseek/deepseek-v4-flash"
-LIGHT_MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
+LIGHT_MODEL = "deepseek/deepseek-v4-flash-0731"
 
 # OpenRouterのweb_searchサーバーツール — サーバー側で実行され、モデルが検索するかどうかを判断する。
 # max_uses で検索回数の上限を指定しないと、モデルが納得いくまで何度も検索を繰り返し、

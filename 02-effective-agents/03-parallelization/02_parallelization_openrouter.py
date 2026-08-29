@@ -24,7 +24,7 @@ from common import OpenRouterTokenTracker, interactive_menu, setup_logging
 load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 INPUT_DIR = Path("input-ja")
 OUTPUT_DIR = Path("output")
 

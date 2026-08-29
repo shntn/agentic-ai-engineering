@@ -31,7 +31,7 @@ load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
 # モデル設定
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 SAMPLE_DOCS_DIR = Path(__file__).parent / "sample_docs_openrouter"
 CHROMA_PERSIST_DIR = str(Path(__file__).parent / ".chroma_db_openrouter")
 

@@ -221,7 +221,7 @@ def main() -> None:
     """各プロンプト手法をいつ使用すべきかを示す、3つのデモを実行"""
     console = Console()
     token_tracker = OpenRouterTokenTracker()
-    client = PromptingClient("deepseek/deepseek-v4-flash", token_tracker)
+    client = PromptingClient("deepseek/deepseek-v4-flash-0731", token_tracker)
 
     header = Panel(
         "[bold cyan]Few-Shot & Chain-of-Thought プロンプト[/bold cyan]\n\n"

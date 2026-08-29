@@ -30,7 +30,7 @@ def agent(goal: str) -> str:
 
     for _ in range(10):
         response = client.chat.send(  # type: ignore[call-overload]
-            model="deepseek/deepseek-v4-flash",
+            model="deepseek/deepseek-v4-flash-0731",
             max_tokens=4096,
             reasoning={"effort": "none"},
             messages=messages,

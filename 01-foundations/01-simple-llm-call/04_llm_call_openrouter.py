@@ -73,7 +73,7 @@ def main() -> None:
     """
 
     # エージェントを初期化
-    agent = LLMClient("deepseek/deepseek-v4-flash")
+    agent = LLMClient("deepseek/deepseek-v4-flash-0731")
 
     prompt = "AI エージェントとは何かを 2 ～ 3 文で説明してください。"
     logger.info(f"👤 User: {prompt}")

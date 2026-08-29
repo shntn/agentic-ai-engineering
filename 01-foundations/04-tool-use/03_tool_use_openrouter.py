@@ -287,7 +287,7 @@ def main() -> None:
     """ユーザーとのやり取りを処理し、チャットフローを調整するメインのオーケストレーション関数"""
     console = Console()
     token_tracker = OpenRouterTokenTracker()
-    chat = ToolUseChat("deepseek/deepseek-v4-flash", token_tracker, console)
+    chat = ToolUseChat("deepseek/deepseek-v4-flash-0731", token_tracker, console)
 
     # ウェルカムメッセージ
     console.print(

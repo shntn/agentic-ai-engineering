@@ -49,18 +49,18 @@ load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
 # モデル設定
-# deepseek-v4-pro は deepseek-v4-flash の約11倍の料金（input/output とも）
+# deepseek-v4-pro は deepseek-v4-flash-0731 の約15倍の料金（input/output とも）
 # なので、簡単なタスクをflashに逃がすことで実際にコストが変わる組み合わせにしている
-MODEL_CLASSIFIER = "deepseek/deepseek-v4-flash"
-MODEL_EASY = "deepseek/deepseek-v4-flash"
+MODEL_CLASSIFIER = "deepseek/deepseek-v4-flash-0731"
+MODEL_EASY = "deepseek/deepseek-v4-flash-0731"
 MODEL_HARD = "deepseek/deepseek-v4-pro"
 
 # 料金（$ per トークン）。client.models.list() で取得した実測値（2026年8月時点）。
 PRICING = {
-    "easy_input": 0.00000007798,
-    "easy_output": 0.00000015596,
-    "hard_input": 0.00000087,
-    "hard_output": 0.00000174,
+    "easy_input": 0.000000045,
+    "easy_output": 0.00000009,
+    "hard_input": 0.000000670596,
+    "hard_output": 0.000001341192,
 }
 
 # 簡単なタスクと難しいタスクを混在させたサンプル
@@ -325,7 +325,7 @@ def main() -> None:
         "[bold cyan]Model Routing Demo[/bold cyan]\n\n"
         "安価な分類器（Flash）が各タスクの難易度を評価し、\n"
         "[green]Flash[/green]（簡単）または[yellow]Pro[/yellow]（難しい）にルーティングします。\n\n"
-        "FlashはProよりinputで約91%安価です——単純なタスクを安価なモデルに\n"
+        "FlashはProよりinputで約93%安価です——単純なタスクを安価なモデルに\n"
         "逃がすことで、規模が大きくなるほど実際のコスト削減につながります。\n\n"
         "[bold]料金:[/bold]\n"
         f"  Flash: ${PRICING['easy_input'] * 1_000_000:.2f} input / "

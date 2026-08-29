@@ -33,7 +33,7 @@ load_dotenv(find_dotenv())
 
 logger = setup_logging(__name__)
 
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 
 # ---------------------------------------------------------------------------
 # Pydanticモデル — 段階的に複雑さを増す

@@ -78,7 +78,7 @@ def main() -> None:
     console = Console()
     # トークントラッカーとチャットセッションを作成
     token_tracker = OpenRouterTokenTracker()
-    agent = ChatSession("deepseek/deepseek-v4-flash", token_tracker)
+    agent = ChatSession("deepseek/deepseek-v4-flash-0731", token_tracker)
 
     # ウェルカムメッセージを表示
     console.print(

@@ -6,7 +6,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 ## 変更内容
 
 - 各レッスンに OpenRouter 対応版スクリプト（`NN_xxx_openrouter.py`）を追加
-  - デフォルトモデル: `deepseek/deepseek-v4-flash`
+  - デフォルトモデル: `deepseek/deepseek-v4-flash-0731`
 - OpenRouter対応レッスンのコメント・プロンプトを日本語化（`*_ja/` ディレクトリ、各`README.ja.md`）
 - オリジナルのスクリプト・READMEには変更を加えていません（すべて新規ファイルとして追加）
 

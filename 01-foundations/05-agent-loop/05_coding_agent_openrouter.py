@@ -138,7 +138,7 @@ class CodingAgent:
     完了するまでツールをループで実行する。
     """
 
-    def __init__(self, model: str = "deepseek/deepseek-v4-flash"):
+    def __init__(self, model: str = "deepseek/deepseek-v4-flash-0731"):
         self.client = OpenRouter(api_key=os.getenv("OPENROUTER_API_KEY", ""))
         self.model = model
         self.max_iterations = 10

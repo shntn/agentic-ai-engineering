@@ -27,8 +27,8 @@ load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
 OUTPUT_DIR = Path("output")
-MODEL = "deepseek/deepseek-v4-flash"
-LIGHT_MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
+LIGHT_MODEL = "deepseek/deepseek-v4-flash-0731"
 
 SUGGESTED_TOPICS = [
     "FastAPIアプリをAWS Lambdaにデプロイする方法",

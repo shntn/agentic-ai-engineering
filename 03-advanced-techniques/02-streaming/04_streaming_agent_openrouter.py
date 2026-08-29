@@ -33,7 +33,7 @@ load_dotenv(find_dotenv())
 # ロギングを設定
 logger = setup_logging(__name__)
 
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 
 SYSTEM_PROMPT = (
     "あなたはツールを使えるアシスタントです。"

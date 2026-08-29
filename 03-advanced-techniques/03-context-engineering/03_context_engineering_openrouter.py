@@ -28,7 +28,7 @@ load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
 # モデル設定
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 
 SYSTEM_PROMPT = (
     "あなたは博識なリサーチアシスタントです。これまでの議論の内容を踏まえながら、"

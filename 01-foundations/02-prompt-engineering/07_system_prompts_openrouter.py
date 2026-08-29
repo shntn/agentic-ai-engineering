@@ -119,7 +119,7 @@ def main() -> None:
     """3 つの異なるシステムプロンプトを使用してサポートチケットの選別を実行"""
     console = Console()
     token_tracker = OpenRouterTokenTracker()
-    engineer = PromptEngineer("deepseek/deepseek-v4-flash", token_tracker)
+    engineer = PromptEngineer("deepseek/deepseek-v4-flash-0731", token_tracker)
 
     header = Panel(
         "[bold cyan]システムプロンプト & ロールエンジニアリング[/bold cyan]\n\n"

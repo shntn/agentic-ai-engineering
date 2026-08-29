@@ -252,7 +252,7 @@ def main() -> None:
     """1つの商品説明を3つの構造化出力手法にかけて実行"""
     console = Console()
     token_tracker = OpenRouterTokenTracker()
-    client = StructuredOutputClient("deepseek/deepseek-v4-flash", token_tracker)
+    client = StructuredOutputClient("deepseek/deepseek-v4-flash-0731", token_tracker)
 
     header = Panel(
         "[bold cyan]構造化出力とプロンプトスキャフォールディング[/bold cyan]\n\n"

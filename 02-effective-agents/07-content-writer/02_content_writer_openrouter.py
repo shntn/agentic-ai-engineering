@@ -54,8 +54,8 @@ from content_writer_openrouter import (
 load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
-MODEL = "deepseek/deepseek-v4-flash"
-RESEARCH_MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
+RESEARCH_MODEL = "deepseek/deepseek-v4-flash-0731"
 OUTPUT_DIR = Path("output")
 SCORE_THRESHOLD = 7.0
 MAX_REFINEMENTS = 2

@@ -43,17 +43,17 @@ load_dotenv(find_dotenv())
 logger = setup_logging(__name__)
 
 # モデル設定
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 
-# deepseek/deepseek-v4-flash の実際の料金（$ per トークン）。
+# deepseek/deepseek-v4-flash-0731 の実際の料金（$ per トークン）。
 # client.models.list() で取得した実測値を基にしている（2026年8月時点）。
 # input_cache_write は公開されていない——DeepSeekのキャッシュ書き込みは通常の
 # input料金と同額で課金される仕様のため（OpenRouterドキュメント参照）。
 PRICING = {
-    "input": 0.00000007798,
-    "output": 0.00000015596,
-    "cache_write": 0.00000007798,  # 通常のinputと同額
-    "cache_read": 0.000000015596,  # inputの約0.2倍
+    "input": 0.000000045,
+    "output": 0.00000009,
+    "cache_write": 0.000000045,  # 通常のinputと同額
+    "cache_read": 0.000000009,  # inputの約0.2倍
 }
 
 # 1024トークンを大きく超える会社ポリシー文書（約1500トークン）。

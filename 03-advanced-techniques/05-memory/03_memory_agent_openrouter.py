@@ -27,7 +27,7 @@ load_dotenv(find_dotenv())
 
 logger = setup_logging(__name__)
 
-MODEL = "deepseek/deepseek-v4-flash"
+MODEL = "deepseek/deepseek-v4-flash-0731"
 
 SYSTEM_PROMPT = """\
 あなたは永続的なメモリを持つパーソナルアシスタントです。3階層のメモリシステムを\

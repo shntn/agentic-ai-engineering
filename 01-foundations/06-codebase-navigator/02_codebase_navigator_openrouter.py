@@ -108,7 +108,7 @@ class CodeNavigatorAgent:
     （LLMがテキストのみで応答するまで）
     """
 
-    def __init__(self, model: str = "deepseek/deepseek-v4-flash") -> None:
+    def __init__(self, model: str = "deepseek/deepseek-v4-flash-0731") -> None:
         self.client = OpenRouter(api_key=os.getenv("OPENROUTER_API_KEY", ""))
         self.model = model
         self.token_tracker = OpenRouterTokenTracker()
