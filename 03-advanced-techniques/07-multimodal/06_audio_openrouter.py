@@ -44,8 +44,7 @@ TTS_MODEL = "qwen/qwen-audio-3.0-tts-flash"
 STT_MODEL = "meta/muse-spark-1.2-contributor"
 
 # 音声生成・文字起こしには時間がかかることがあり、SDKのデフォルトタイムアウト
-# ではこれより短く、正常な応答でもタイムアウト→リトライのループに陥りやすい
-# （CLAUDE.ja-openrouter.md「タイムアウト・リトライ対策」参照）。
+# ではこれより短く、正常な応答でもタイムアウト→リトライのループに陥りやすい。
 REQUEST_TIMEOUT_MS = 120_000  # 120秒
 
 # STTはreasoningトークンを多く消費するため、max_tokensを小さくすると文字起こし

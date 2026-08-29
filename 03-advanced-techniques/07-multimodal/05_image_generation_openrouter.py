@@ -28,8 +28,7 @@ logger = setup_logging(__name__)
 MODEL = "meta/muse-image"
 
 # 画像生成には数十秒かかることがあり、SDKのデフォルトタイムアウトではこれより
-# 短く、正常な応答でもタイムアウト→リトライのループに陥りやすい
-# （CLAUDE.ja-openrouter.md「タイムアウト・リトライ対策」参照）。
+# 短く、正常な応答でもタイムアウト→リトライのループに陥りやすい。
 REQUEST_TIMEOUT_MS = 120_000  # 120秒
 
 SAMPLE_PROMPTS = {
