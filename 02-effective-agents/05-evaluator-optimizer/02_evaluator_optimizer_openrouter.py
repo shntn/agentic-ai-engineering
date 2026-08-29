@@ -34,7 +34,7 @@ LIGHT_MODEL = "deepseek/deepseek-v4-flash-0731"
 
 # OpenRouterのweb_searchサーバーツール — サーバー側で実行され、モデルが検索するかどうかを判断する。
 # max_uses で検索回数の上限を指定しないと、モデルが納得いくまで何度も検索を繰り返し、
-# 実行時間・コストが跳ね上がることがある（詳細はCLAUDE.ja-openrouter.md参照）
+# 実行時間・コストが跳ね上がることがある
 WEB_SEARCH_TOOL = {
     "type": "openrouter:web_search",
     "parameters": {"max_uses": 1},
