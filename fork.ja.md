@@ -37,7 +37,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 | 03-advanced-techniques | 08-guardrails               | ✅ 完了   |
 | 04-testing-evaluation  | 01-unit-testing-agents      | ✅ 完了   |
 | 04-testing-evaluation  | 02-evals                    | ✅ 完了   |
-| 04-testing-evaluation  | 03-tracing-debugging        | ⬜ 未着手 |
+| 04-testing-evaluation  | 03-tracing-debugging        | ✅ 完了   |
 | 04-testing-evaluation  | 04-red-teaming-safety       | ⬜ 未着手 |
 | 04-testing-evaluation  | 05-benchmarking             | ⬜ 未着手 |
 | 04-testing-evaluation  | 06-eval-frameworks          | ⬜ 未着手 |
