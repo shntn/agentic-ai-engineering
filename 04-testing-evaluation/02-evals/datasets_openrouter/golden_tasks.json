@@ -1,0 +1,146 @@
+{
+    "version": "1.0",
+    "description": "リサーチアシスタント評価用の正解データセット",
+    "tasks": [
+        {
+            "id": "task_001",
+            "question": "マイクロサービスアーキテクチャの主な利点は何ですか？",
+            "expected_keywords": ["スケーラビリティ", "障害分離", "独立"],
+            "expected_source_ids": ["doc_001"],
+            "difficulty": "easy",
+            "category": "architecture",
+            "eval_type": "regression",
+            "reference_answer": "主な利点は、スケーラビリティ、障害分離、そしてサービスの独立したデプロイです（doc_001）。"
+        },
+        {
+            "id": "task_002",
+            "question": "REST API設計のベストプラクティスは何ですか？",
+            "expected_keywords": ["名詞", "エンドポイント", "HTTPメソッド", "ステータスコード"],
+            "expected_source_ids": ["doc_002"],
+            "difficulty": "easy",
+            "category": "api",
+            "eval_type": "regression",
+            "reference_answer": "エンドポイントには名詞を使い、アクションにはHTTPメソッドを使い、適切なステータスコード、バージョニング、ページネーションを使用します（doc_002）。"
+        },
+        {
+            "id": "task_003",
+            "question": "データベースインデックスはどのようにクエリのパフォーマンスを向上させますか？",
+            "expected_keywords": ["B-tree", "検索", "クエリ"],
+            "expected_source_ids": ["doc_003"],
+            "difficulty": "easy",
+            "category": "database",
+            "eval_type": "regression",
+            "reference_answer": "インデックスはB-tree構造を使って効率的な検索を行い、フルテーブルスキャンを減らしてクエリを高速化します（doc_003）。"
+        },
+        {
+            "id": "task_004",
+            "question": "認証と認可の違いは何ですか？",
+            "expected_keywords": ["本人確認", "アクセス制御", "認証", "認可"],
+            "expected_source_ids": ["doc_004"],
+            "difficulty": "easy",
+            "category": "security",
+            "eval_type": "regression",
+            "reference_answer": "認証は本人確認を行い、認可はアクセス権限を制御します。JWTを使い、パスワードはbcryptでハッシュ化してください（doc_004）。"
+        },
+        {
+            "id": "task_005",
+            "question": "CI/CDパイプラインにおける主な実践は何ですか？",
+            "expected_keywords": ["継続的", "ビルド", "テスト", "デプロイ"],
+            "expected_source_ids": ["doc_005"],
+            "difficulty": "easy",
+            "category": "devops",
+            "eval_type": "regression",
+            "reference_answer": "CIはコミットごとに自動でビルド・テストを行い、CDは成功したビルドをデプロイします。高速なフィードバックループを使いましょう（doc_005）。"
+        },
+        {
+            "id": "task_006",
+            "question": "Kubernetesの中心となる概念は何ですか？",
+            "expected_keywords": ["Pod", "Service", "Deployment"],
+            "expected_source_ids": ["doc_006"],
+            "difficulty": "easy",
+            "category": "devops",
+            "reference_answer": "中心となる概念はPod（最小単位）、Service（ネットワーキング）、Deployment（宣言的な更新）です（doc_006）。"
+        },
+        {
+            "id": "task_007",
+            "question": "どのようなキャッシュ戦略があり、Redisはどんなときに使うべきですか？",
+            "expected_keywords": ["cache-aside", "write-through", "Redis"],
+            "expected_source_ids": ["doc_008"],
+            "difficulty": "easy",
+            "category": "performance",
+            "reference_answer": "戦略にはcache-asideとwrite-throughがあります。Redisは高スループット・低レイテンシのシナリオに適しています（doc_008）。"
+        },
+        {
+            "id": "task_008",
+            "question": "イベントソーシングやCQRSのようなイベント駆動アーキテクチャのパターンを比較してください。",
+            "expected_keywords": ["イベントソーシング", "CQRS", "pub/sub"],
+            "expected_source_ids": ["doc_007"],
+            "difficulty": "medium",
+            "category": "architecture",
+            "reference_answer": "イベントソーシングは状態をイベントとして保存し、CQRSは読み取りと書き込みを分離します。pub/subは疎結合を実現します（doc_007）。"
+        },
+        {
+            "id": "task_009",
+            "question": "認証によってAPIをどのように保護すればよいですか？パスワードとトークンのベストプラクティスも含めてください。",
+            "expected_keywords": ["JWT", "OAuth", "ハッシュ化", "bcrypt"],
+            "expected_source_ids": ["doc_004"],
+            "difficulty": "medium",
+            "category": "security",
+            "reference_answer": "トークンにはJWTまたはOAuthを使い、パスワードはbcryptまたはargon2でハッシュ化し、HTTPSを強制してください（doc_004）。"
+        },
+        {
+            "id": "task_010",
+            "question": "マイクロサービスの課題は何ですか？また、イベント駆動アーキテクチャは疎結合にどう役立ちますか？",
+            "expected_keywords": ["分散", "複雑さ", "疎結合", "イベント"],
+            "expected_source_ids": ["doc_001", "doc_007"],
+            "difficulty": "hard",
+            "category": "architecture",
+            "reference_answer": "マイクロサービスは分散システムの複雑さを増しますが、pub/subのようなイベント駆動パターンはサービス間の疎結合を実現します（doc_001, doc_007）。"
+        },
+        {
+            "id": "task_011",
+            "question": "キャッシュとデータベースインデックスの両方を使って、アプリケーションのパフォーマンスをどう改善できますか？",
+            "expected_keywords": ["キャッシュ", "インデックス", "レイテンシ", "パフォーマンス"],
+            "expected_source_ids": ["doc_003", "doc_008"],
+            "difficulty": "hard",
+            "category": "performance",
+            "reference_answer": "クエリ最適化のためのデータベースインデックスと、レイテンシを削減するキャッシュ（cache-aside/Redis）を組み合わせます（doc_003, doc_008）。"
+        },
+        {
+            "id": "task_012",
+            "question": "CI/CDからKubernetesによるコンテナオーケストレーションまで、完全なDevOpsパイプラインを説明してください。",
+            "expected_keywords": ["CI", "CD", "Kubernetes", "コンテナ", "デプロイ"],
+            "expected_source_ids": ["doc_005", "doc_006"],
+            "difficulty": "hard",
+            "category": "devops",
+            "reference_answer": "CI/CDは自動でビルド・テスト・デプロイを行い、KubernetesはPodとDeploymentを通じてコンテナをオーケストレーションします（doc_005, doc_006）。"
+        },
+        {
+            "id": "task_013",
+            "question": "機械学習に最適なプログラミング言語は何ですか？",
+            "expected_keywords": ["関連する情報", "見つかりません", "情報がありません"],
+            "expected_source_ids": [],
+            "difficulty": "easy",
+            "category": "out-of-scope",
+            "reference_answer": "ナレッジベースには機械学習のプログラミング言語に関する情報は含まれていません。"
+        },
+        {
+            "id": "task_014",
+            "question": "TypeScriptを使ったReactフロントエンドの構築方法は？",
+            "expected_keywords": ["関連する情報", "見つかりません", "情報がありません"],
+            "expected_source_ids": [],
+            "difficulty": "easy",
+            "category": "out-of-scope",
+            "reference_answer": "ナレッジベースはReactやTypeScriptのフロントエンド構築については扱っていません。"
+        },
+        {
+            "id": "task_015",
+            "question": "データベースの過剰なインデックスにはどんなリスクがあり、複合インデックスの列の順序はなぜ重要ですか？",
+            "expected_keywords": ["過剰", "書き込み", "列の順序", "複合"],
+            "expected_source_ids": ["doc_003"],
+            "difficulty": "medium",
+            "category": "database",
+            "reference_answer": "過剰なインデックスは書き込みを遅くし、ストレージを浪費します。複合インデックスの列の順序はクエリパターンと一致させる必要があります（doc_003）。"
+        }
+    ]
+}
