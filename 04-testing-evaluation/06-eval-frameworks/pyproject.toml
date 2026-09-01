@@ -5,15 +5,16 @@ description = "Lesson: Eval Frameworks - Promptfoo, Braintrust AutoEvals, Langfu
 requires-python = ">=3.11"
 dependencies = [
     "common",
+    "janome>=0.5.0",  # 日本語の分かち書き（検索クエリのトークナイズ）
     "python-dotenv>=1.0.0",
     "rich>=13.7.0",
 ]
 
 [project.optional-dependencies]
 promptfoo = ["pyyaml>=6.0"]
-braintrust = ["autoevals>=0.0.80"]
+braintrust = ["autoevals>=0.0.80", "openai>=1.0.0"]  # openai: OpenRouterへのOpenAI互換クライアント
 langfuse = ["langfuse>=2.0.0"]
-all = ["pyyaml>=6.0", "autoevals>=0.0.80", "langfuse>=2.0.0"]
+all = ["pyyaml>=6.0", "autoevals>=0.0.80", "openai>=1.0.0", "langfuse>=2.0.0"]
 
 [tool.uv.sources]
 common = { path = "../../common", editable = true }

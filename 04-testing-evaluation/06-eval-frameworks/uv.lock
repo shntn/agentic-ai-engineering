@@ -252,6 +252,15 @@ wheels = [
 ]
 
 [[package]]
+name = "janome"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/08/4e/dc2b1a89a4ffafbf9bf49c8e11f69e28ba8b3ef81d11afe6e9f96caee6cc/Janome-0.5.0.tar.gz", hash = "sha256:ce4a3ed7a4635c2f80139639327d5b1e0381858ad74a3c4a61e8cc83f820400e", size = 18829020, upload-time = "2023-07-01T10:53:09.161Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/73/7d/70f4069f4bbf0fca023e82a1fbbade6f5216365d4fe259fee1950723eca5/Janome-0.5.0-py2.py3-none-any.whl", hash = "sha256:d098670394a77881ce2f6b7d696c0ea5ff74c0c8cf74a8a882159ec82c0e6dc7", size = 19654103, upload-time = "2023-07-01T10:52:58.572Z" },
+]
+
+[[package]]
 name = "jiter"
 version = "0.13.0"
 source = { registry = "https://pypi.org/simple" }
@@ -390,6 +399,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "common" },
+    { name = "janome" },
     { name = "python-dotenv" },
     { name = "rich" },
 ]
@@ -398,10 +408,12 @@ dependencies = [
 all = [
     { name = "autoevals" },
     { name = "langfuse" },
+    { name = "openai" },
     { name = "pyyaml" },
 ]
 braintrust = [
     { name = "autoevals" },
+    { name = "openai" },
 ]
 langfuse = [
     { name = "langfuse" },
@@ -415,8 +427,11 @@ requires-dist = [
     { name = "autoevals", marker = "extra == 'all'", specifier = ">=0.0.80" },
     { name = "autoevals", marker = "extra == 'braintrust'", specifier = ">=0.0.80" },
     { name = "common", editable = "../../common" },
+    { name = "janome", specifier = ">=0.5.0" },
     { name = "langfuse", marker = "extra == 'all'", specifier = ">=2.0.0" },
     { name = "langfuse", marker = "extra == 'langfuse'", specifier = ">=2.0.0" },
+    { name = "openai", marker = "extra == 'all'", specifier = ">=1.0.0" },
+    { name = "openai", marker = "extra == 'braintrust'", specifier = ">=1.0.0" },
     { name = "python-dotenv", specifier = ">=1.0.0" },
     { name = "pyyaml", marker = "extra == 'all'", specifier = ">=6.0" },
     { name = "pyyaml", marker = "extra == 'promptfoo'", specifier = ">=6.0" },
