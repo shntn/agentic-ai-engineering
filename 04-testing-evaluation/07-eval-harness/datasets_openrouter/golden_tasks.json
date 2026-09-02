@@ -1,0 +1,142 @@
+{
+    "version": "1.0",
+    "description": "評価ハーネスの集大成向けゴールデンデータセット (OpenRouter)",
+    "tasks": [
+        {
+            "id": "task_001",
+            "question": "マイクロサービスアーキテクチャの主な利点は何ですか？",
+            "expected_keywords": ["スケーラビリティ", "障害分離", "独立"],
+            "expected_source_ids": ["doc_001"],
+            "difficulty": "easy",
+            "category": "architecture"
+        },
+        {
+            "id": "task_002",
+            "question": "REST API設計のベストプラクティスは何ですか？",
+            "expected_keywords": ["名詞", "エンドポイント", "HTTPメソッド", "ステータスコード"],
+            "expected_source_ids": ["doc_002"],
+            "difficulty": "easy",
+            "category": "api"
+        },
+        {
+            "id": "task_003",
+            "question": "データベースインデックスはどのようにクエリのパフォーマンスを向上させますか？",
+            "expected_keywords": ["B-tree", "検索", "クエリ"],
+            "expected_source_ids": ["doc_003"],
+            "difficulty": "easy",
+            "category": "database"
+        },
+        {
+            "id": "task_004",
+            "question": "認証と認可の違いは何ですか？",
+            "expected_keywords": ["本人確認", "アクセス", "認証", "認可"],
+            "expected_source_ids": ["doc_004"],
+            "difficulty": "easy",
+            "category": "security"
+        },
+        {
+            "id": "task_005",
+            "question": "CI/CDパイプラインにおける主な実践は何ですか？",
+            "expected_keywords": ["継続的", "ビルド", "テスト", "デプロイ"],
+            "expected_source_ids": ["doc_005"],
+            "difficulty": "easy",
+            "category": "devops"
+        },
+        {
+            "id": "task_006",
+            "question": "Kubernetesの中心となる概念は何ですか？",
+            "expected_keywords": ["Pod", "Service", "Deployment"],
+            "expected_source_ids": ["doc_006"],
+            "difficulty": "easy",
+            "category": "devops"
+        },
+        {
+            "id": "task_007",
+            "question": "どのようなキャッシュ戦略があり、Redisはどのような場合に使うべきですか？",
+            "expected_keywords": ["cache-aside", "write-through", "Redis"],
+            "expected_source_ids": ["doc_008"],
+            "difficulty": "easy",
+            "category": "performance"
+        },
+        {
+            "id": "task_008",
+            "question": "イベントソーシングやCQRSのようなイベント駆動アーキテクチャのパターンを比較してください。",
+            "expected_keywords": ["イベントソーシング", "CQRS", "pub/sub"],
+            "expected_source_ids": ["doc_007"],
+            "difficulty": "medium",
+            "category": "architecture"
+        },
+        {
+            "id": "task_009",
+            "question": "認証を使ってAPIをどのように保護すればよいですか？パスワードとトークンのベストプラクティスも含めてください。",
+            "expected_keywords": ["JWT", "OAuth", "ハッシュ", "bcrypt"],
+            "expected_source_ids": ["doc_004"],
+            "difficulty": "medium",
+            "category": "security"
+        },
+        {
+            "id": "task_010",
+            "question": "マイクロサービスの課題は何ですか、またイベント駆動アーキテクチャは疎結合にどう役立ちますか？",
+            "expected_keywords": ["分散", "複雑さ", "疎結合", "イベント", "pub/sub"],
+            "expected_source_ids": ["doc_001", "doc_007"],
+            "difficulty": "hard",
+            "category": "architecture"
+        },
+        {
+            "id": "task_011",
+            "question": "キャッシュとデータベースインデックスの両方を使ってアプリケーションのパフォーマンスをどう改善できますか？",
+            "expected_keywords": ["キャッシュ", "インデックス", "レイテンシ", "パフォーマンス"],
+            "expected_source_ids": ["doc_003", "doc_008"],
+            "difficulty": "hard",
+            "category": "performance"
+        },
+        {
+            "id": "task_012",
+            "question": "CI/CDからKubernetesによるコンテナオーケストレーションまで、完全なDevOpsパイプラインを説明してください。",
+            "expected_keywords": ["CI", "CD", "Kubernetes", "コンテナ", "デプロイ", "フィーチャーフラグ"],
+            "expected_source_ids": ["doc_005", "doc_006"],
+            "difficulty": "hard",
+            "category": "devops"
+        },
+        {
+            "id": "task_013",
+            "question": "機械学習に最適なプログラミング言語は何ですか？",
+            "expected_keywords": ["見つかりませんでした"],
+            "expected_source_ids": [],
+            "difficulty": "easy",
+            "category": "out-of-scope"
+        },
+        {
+            "id": "task_014",
+            "question": "TypeScriptを使ってReactフロントエンドをセットアップするにはどうすればいいですか？",
+            "expected_keywords": ["見つかりませんでした"],
+            "expected_source_ids": [],
+            "difficulty": "easy",
+            "category": "out-of-scope"
+        },
+        {
+            "id": "task_015",
+            "question": "データベースの過剰インデックスにはどのようなリスクがあり、複合インデックスの列の順序はどう影響しますか？",
+            "expected_keywords": ["過剰なインデックス", "書き込み", "列の順序", "複合"],
+            "expected_source_ids": ["doc_003"],
+            "difficulty": "medium",
+            "category": "database"
+        },
+        {
+            "id": "task_016",
+            "question": "イベント駆動通信を用いたセキュアなマイクロサービスシステムを設計してください。どのような認証・API構造・メッセージングパターンを使うべきですか？",
+            "expected_keywords": ["JWT", "マイクロサービス", "REST", "イベントソーシング", "CQRS", "OAuth", "エンドポイント"],
+            "expected_source_ids": ["doc_001", "doc_002", "doc_004", "doc_007"],
+            "difficulty": "hard",
+            "category": "cross-cutting"
+        },
+        {
+            "id": "task_017",
+            "question": "write-throughとwrite-behindのキャッシュ戦略を比較してください。トレードオフは何ですか、TTLとキャッシュ無効化はどう関わりますか？",
+            "expected_keywords": ["write-through", "write-behind", "TTL", "無効化", "レイテンシ"],
+            "expected_source_ids": ["doc_008"],
+            "difficulty": "medium",
+            "category": "performance"
+        }
+    ]
+}

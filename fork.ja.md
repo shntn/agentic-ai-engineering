@@ -41,7 +41,7 @@ OpenRouter対応・日本語化した個人プロジェクトです。
 | 04-testing-evaluation  | 04-red-teaming-safety       | ✅ 完了   |
 | 04-testing-evaluation  | 05-benchmarking             | ✅ 完了   |
 | 04-testing-evaluation  | 06-eval-frameworks          | ✅ 完了   |
-| 04-testing-evaluation  | 07-eval-harness             | ⬜ 未着手 |
+| 04-testing-evaluation  | 07-eval-harness             | ✅ 完了   |
 | 05-loop-engineering    | 01-skills                   | ⬜ 未着手 |
 | 05-loop-engineering    | 02-hooks-lifecycle          | ⬜ 未着手 |
 | 05-loop-engineering    | 03-sandboxing               | ⬜ 未着手 |
